@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RP Login Page</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 🔥 TOP LEFT BRAND -->
+    <div class="top-left-brand">
+        <h1>GRND</h1>
+        <p>OPEN WORLD IN YOUR MOBILE</p>
+    </div>
+
+    <!-- 🔥 TOP CENTER MENU -->
+    <div class="top-center-menu">
+
+        <button type="button" id="screenshotBtn">
+            Screenshot
+        </button>
+
+        <button type="button" id="forumBtn"
+            onclick="window.open('https://forum.rpgrand.com/', '_blank');">
+            Forum
+        </button>
+
+        <button type="button" id="shopBtn"
+            onclick="window.open('https://rpgrand.com/en/shop', '_blank');">
+            Shop
+        </button>
+
+    </div>
+
+    <!-- 🔥 TOP RIGHT LOGIN BUTTON -->
+    <button type="button" class="open-login">
+        LOGIN
+    </button>
+
+    <!-- 🔥 HERO TEXT -->
+    <div class="hero-text">
+        <h1>OPEN WORLD</h1>
+        <p>IN A MOBILE MULTIPLAYER GAME</p>
+    </div>
+
+    <!-- 🔥 DOWNLOAD BUTTON -->
+    <button class="download-apk"
+        onclick="window.open('https://rpgrand.com/en/download', '_blank')">
+        DOWNLOAD APK
+    </button>
+
+    <!-- 🔥 LOGIN BOX -->
+    <div class="login-box" id="loginBox">
+
+        <h2>LOGIN</h2>
+
+        <form id="loginForm">
+
+            <div class="input-box">
+                <input type="text" id="username" required>
+                <label>Username</label>
+            </div>
+
+            <div class="input-box">
+                <input type="password" id="password" required>
+                <label>Password</label>
+            </div>
+
+            <button type="submit">
+                LOGIN
+            </button>
+
+        </form>
+
+    </div>
+
+<div class="reward-popup" id="rewardPopup">
+    <h2> CONGRATULATIONS</h2>
+    <p>You claimed your <b>1000 GRAND COINS</b></p>
+
+    <p class="note">
+         Wait for 1 hour for the reward to be sent to your account
+    </p>
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

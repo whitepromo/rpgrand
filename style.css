@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: url("grandrp.png") no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* =========================================
+   BACKGROUND OVERLAY
+========================================= */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.22);
+}
+
+/* =========================================
+   INFO PANEL
+========================================= */
+.info-panel {
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    max-width: 450px;
+    z-index: 2;
+}
+
+.info-panel h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.info-panel p{
+    color:#d5d5d5;
+    line-height:1.7;
+}
+
+/* =========================================
+   LOGIN BOX (SIMPLE CLEAN)
+========================================= */
+.login-box {
+    position: absolute;
+    top: 55%;
+    right: 40px;
+    transform: translateY(-50%);
+
+    width: 420px;
+    min-height: 520px;
+    padding: 50px;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+
+    color: white;
+    text-align: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s ease;
+
+    z-index: 5;
+}
+
+.login-box.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* TITLE */
+.login-box h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+/* =========================================
+   INPUT
+========================================= */
+.input-box {
+    margin: 20px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 12px;
+
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+
+    color: white;
+    outline: none;
+}
+
+.input-box input:focus {
+    border-color: #ffd000;
+}
+
+/* LABEL SIMPLE */
+.input-box label {
+    display: block;
+    text-align: left;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+.login-box button {
+    width: 100%;
+    height: 50px;
+
+    margin-top: 25px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #ffd000;
+    color: black;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.login-box button:hover {
+    background: #ffb300;
+}
+
+/* =========================================
+   LOGIN BUTTON (TOP RIGHT)
+========================================= */
+.open-login{
+
+    position:fixed;
+
+    top:50px;
+    right:100px;
+
+    width:150px;
+    height:48px;
+
+    background:#ffd000;
+    color:#000;
+
+    border:none;
+    
+
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    z-index:9999;
+}
+
+.open-login:hover{
+
+    background:#ffb300;
+
+
+}
+
+/* =========================================
+   TOP MENU
+========================================= */
+.top-center-menu{
+
+    position:fixed;
+
+    top:50px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+    gap:10px;
+
+    z-index:9999;
+}
+
+.top-center-menu button{
+
+    width:100px;
+    height:39px;
+
+    background:#000;
+    color:#bbc3f9;
+
+    border:1px solid #2c2c2c;
+    border-radius:10px;
+
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.top-center-menu button:hover{
+
+    background:#ffd000;
+    color:#000;
+    border-color:#ffd000;
+
+    transform:translateY(-2px);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+
+    color: rgba(252, 252, 242, 0.55); /* 🔥 transparent text */
+}
+
+.hero-text h1 {
+    font-size: 70px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 0 5px 20px rgba(0,0,0,0.7);
+}
+
+.hero-text p {
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: #ffd000;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.download-apk {
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    padding: 14px 32px;
+
+    background: #ffd000;
+    color: #000;
+
+    border: none;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    transition: 0.2s;
+}
+
+.download-apk:hover {
+    background: #ffb300;
+    transform: translateX(-50%) translateY(-3px);
+}
+
+.top-left-brand {
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 9999;
+    
+    color: rgb(240, 245, 209);
+    text-transform: uppercase;
+}
+
+.top-left-brand h1 {
+    font-size: 40px;
+}
+
+.top-left-brand p {
+    font-size: 10px;
+    letter-spacing: 2px;
+ color: rgb(240, 245, 209);
+     margin-top: 4px;
+         font-family: 'Times New Roman', Times, serif;
+
+}
+
+.reward-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+
+    background: rgba(0, 0, 0, 0.88);
+    border: 1px solid #ffd000;
+
+    color: white;
+    text-align: center;
+
+    padding: 60px 80px;   /* 🔥 pinalaki */
+    border-radius: 16px;
+
+    min-width: 420px;     /* 🔥 mas malapad */
+    min-height: 200px;    /* 🔥 mas mataas */
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s ease;
+
+    z-index: 99999;
+}
+
+.reward-popup h2 {
+    font-size: 32px;      /* 🔥 mas malaking title */
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.reward-popup p {
+    font-size: 18px;      /* 🔥 mas readable */
+    color: #ddd;
+}
+
+.reward-popup.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.reward-popup .note {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ffcc00;
+    opacity: 0.9;
+}
+
+/* floating effect */
+@keyframes floatUp{
+    0%{
+        transform: translate(-50%, -50%) scale(0.6);
+    }
+    50%{
+        transform: translate(-50%, -60%) scale(1);
+    }
+    100%{
+        transform: translate(-50%, -80%) scale(0.95);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   📱 MOBILE RESPONSIVE
+========================================= */
+@media (max-width: 768px) {
+
+    /* background text size fix */
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-text p {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    /* login box full width sa mobile */
+    .login-box {
+        position: absolute;
+        right: 50%;
+        top: 60%;
+        transform: translate(50%, -50%);
+
+        width: 90%;
+        min-height: auto;
+        padding: 30px;
+    }
+
+    /* login button adjust */
+    .open-login {
+        top: 15px;
+        right: 15px;
+        width: 120px;
+        height: 42px;
+        font-size: 12px;
+    }
+
+    /* center menu stack or shrink */
+    .top-center-menu {
+        top: 15px;
+        gap: 6px;
+    }
+
+    .top-center-menu button {
+        width: 80px;
+        height: 35px;
+        font-size: 11px;
+    }
+
+    /* download button fix */
+    .download-apk {
+        bottom: 80px;
+        padding: 12px 20px;
+        font-size: 12px;
+    }
+
+    /* brand smaller */
+    .top-left-brand h1 {
+        font-size: 24px;
+    }
+
+    .top-left-brand p {
+        font-size: 8px;
+    }
+
+    /* info panel hide (optional for clean mobile UI) */
+    .info-panel {
+        display: none;
+    }
+}
+
+
