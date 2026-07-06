@@ -156,7 +156,7 @@ body::before {
 
     position:fixed;
 
-    top:50px;
+    top:70px;
     right:100px;
 
     width:150px;
@@ -359,6 +359,8 @@ body::before {
     opacity: 0.9;
 }
 
+
+
 /* floating effect */
 @keyframes floatUp{
     0%{
@@ -377,71 +379,166 @@ body::before {
 /* =========================================
    📱 MOBILE RESPONSIVE
 ========================================= */
-@media (max-width: 768px) {
+@media screen and (max-width:768px){
 
-    /* background text size fix */
-    .hero-text h1 {
-        font-size: 38px;
+    body{
+        background-position:center;
+        background-size:cover;
     }
 
-    .hero-text p {
-        font-size: 12px;
-        letter-spacing: 2px;
+    /* Brand */
+    .top-left-brand{
+        top:15px;
+        left:18px;
     }
 
-    /* login box full width sa mobile */
-    .login-box {
-        position: absolute;
-        right: 50%;
-        top: 60%;
-        transform: translate(50%, -50%);
-
-        width: 90%;
-        min-height: auto;
-        padding: 30px;
+    .top-left-brand h1{
+        font-size:22px;
     }
 
-    /* login button adjust */
-    .open-login {
-        top: 15px;
-        right: 15px;
-        width: 120px;
-        height: 42px;
-        font-size: 12px;
+    .top-left-brand p{
+        font-size:8px;
+        letter-spacing:1px;
     }
 
-    /* center menu stack or shrink */
-    .top-center-menu {
-        top: 15px;
-        gap: 6px;
+    /* Top Menu */
+    .top-center-menu{
+
+        top:70px;
+        left:50%;
+        transform:translateX(-50%);
+
+        gap:8px;
+        flex-wrap:wrap;
+        justify-content:center;
+
+        width:95%;
     }
 
-    .top-center-menu button {
-        width: 80px;
-        height: 35px;
-        font-size: 11px;
+    .top-center-menu button{
+
+        width:90px;
+        height:36px;
+
+        font-size:11px;
     }
 
-    /* download button fix */
-    .download-apk {
-        bottom: 80px;
-        padding: 12px 20px;
-        font-size: 12px;
+    /* Login Button */
+    .open-login{
+
+        top:18px;
+        right:18px;
+
+        width:110px;
+        height:40px;
+
+        font-size:12px;
     }
 
-    /* brand smaller */
-    .top-left-brand h1 {
-        font-size: 24px;
+    /* Hero */
+    .hero-text{
+
+        width:90%;
+
+        left:50%;
+        top:48%;
     }
 
-    .top-left-brand p {
-        font-size: 8px;
+    .hero-text h1{
+
+        font-size:34px;
+        line-height:1.1;
     }
 
-    /* info panel hide (optional for clean mobile UI) */
-    .info-panel {
-        display: none;
+    .hero-text p{
+
+        font-size:12px;
+        letter-spacing:2px;
+        margin-top:8px;
     }
+
+    /* Download Button */
+    .download-apk{
+
+        width:85%;
+        max-width:280px;
+
+        height:48px;
+
+        bottom:35px;
+
+        font-size:13px;
+    }
+
+    /* Login Box */
+    .login-box{
+
+        position:fixed;
+
+        top:50%;
+        left:50%;
+
+        right:auto;
+
+        transform:translate(-50%,-50%);
+
+        width:92%;
+        max-width:360px;
+
+        min-height:auto;
+
+        padding:25px;
+
+        border-radius:14px;
+    }
+
+    .login-box h2{
+
+        font-size:22px;
+        margin-bottom:20px;
+    }
+
+    .input-box input{
+
+        height:48px;
+        font-size:15px;
+    }
+
+    .login-box button{
+
+        height:48px;
+        font-size:15px;
+    }
+
+    /* Reward Popup */
+    .reward-popup{
+
+        width:90%;
+        min-width:unset;
+
+        padding:30px 20px;
+
+        min-height:auto;
+    }
+
+    .reward-popup h2{
+
+        font-size:24px;
+    }
+
+    .reward-popup p{
+
+        font-size:15px;
+    }
+
+    .reward-popup .note{
+
+        font-size:12px;
+    }
+
+    /* Hide left description */
+    .info-panel{
+        display:none;
+    }
+
 }
-
-
