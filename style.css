@@ -413,6 +413,7 @@ body::before {
     body{
         background-position:center;
         background-size:cover;
+        overflow-x:hidden;
     }
 
     /* Brand */
@@ -432,55 +433,45 @@ body::before {
 
     /* Top Menu */
     .top-center-menu{
-
         top:70px;
         left:50%;
         transform:translateX(-50%);
-
+        display:flex;
         gap:8px;
         flex-wrap:wrap;
         justify-content:center;
-
         width:95%;
     }
 
     .top-center-menu button{
-
         width:90px;
         height:36px;
-
         font-size:11px;
     }
 
     /* Login Button */
     .open-login{
-
         top:18px;
         right:18px;
-
         width:110px;
         height:40px;
-
         font-size:12px;
     }
 
     /* Hero */
     .hero-text{
-
         width:90%;
-
+        top:42%;
         left:50%;
-        top:48%;
+        transform:translate(-50%,-50%);
     }
 
     .hero-text h1{
-
         font-size:34px;
         line-height:1.1;
     }
 
     .hero-text p{
-
         font-size:12px;
         letter-spacing:2px;
         margin-top:8px;
@@ -488,86 +479,73 @@ body::before {
 
     /* Download Button */
     .download-apk{
+        position:fixed !important;
+        left:50% !important;
+        bottom:120px !important;   /* Taasan pa kung gusto */
+        transform:translateX(-50%) !important;
 
         width:85%;
-        max-width:280px;
+        max-width:300px;
+        min-width:unset;
 
-        height:48px;
+        height:50px;
+        padding:0;
 
-        bottom:35px;
-
-        font-size:13px;
+        font-size:14px;
+        z-index:99999;
     }
 
     /* Login Box */
     .login-box{
-
         position:fixed;
-
         top:50%;
         left:50%;
-
         right:auto;
-
         transform:translate(-50%,-50%);
-
         width:92%;
         max-width:360px;
-
         min-height:auto;
-
         padding:25px;
-
         border-radius:14px;
     }
 
     .login-box h2{
-
         font-size:22px;
         margin-bottom:20px;
     }
 
     .input-box input{
-
         height:48px;
         font-size:15px;
     }
 
     .login-box button{
-
         height:48px;
         font-size:15px;
     }
 
     /* Reward Popup */
     .reward-popup{
-
         width:90%;
         min-width:unset;
-
-        padding:30px 20px;
-
         min-height:auto;
+        padding:30px 20px;
     }
 
     .reward-popup h2{
-
         font-size:24px;
     }
 
     .reward-popup p{
-
         font-size:15px;
     }
 
     .reward-popup .note{
-
         font-size:12px;
     }
 
-    /* Hide left description */
+    /* Hide Info Panel */
     .info-panel{
         display:none;
     }
-
 }
