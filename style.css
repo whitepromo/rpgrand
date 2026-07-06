@@ -493,19 +493,14 @@ body::before {
     text-align: center;
 
     z-index: 999999 !important;
-
     background: rgba(255,0,0,.3); /* pang-test */
 }
 
 .bonus-text p{
-    color:#fff;
+     color:#ffd000;
     font-size:14px;
 }
 
-.bonus-text span{
-    color:#ffd000;
-    font-weight:bold;
-}
     /* ==========================
        DOWNLOAD BUTTON
     ========================== */
