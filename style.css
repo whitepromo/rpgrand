@@ -259,32 +259,25 @@ body::before {
     text-transform: uppercase;
 }
 
-/* =========================================
-   DOWNLOAD BUTTON
-========================================= */
 .download-apk {
     position: absolute;
-    left: 50%;
     bottom: 150px;
+    left: 50%;
     transform: translateX(-50%);
-
-    min-width: 220px;
     height: 50px;
-    padding: 0 32px;
+    padding: 14px 32px;
 
     background: #ffd000;
     color: #000;
 
     border: none;
-    border-radius: 8px;
-
-    font-size: 15px;
     font-weight: bold;
 
     cursor: pointer;
+
     z-index: 9999;
 
-    transition: .25s;
+    transition: 0.2s;
 }
 
 .download-apk:hover {
@@ -292,28 +285,6 @@ body::before {
     transform: translateX(-50%) translateY(-3px);
 }
 
-/* =========================================
-   📱 MOBILE
-========================================= */
-@media screen and (max-width:768px){
-
-    .download-apk{
-        position: fixed;      /* mas stable sa mobile */
-        left: 50%;
-        bottom: 100px;        /* taasan pa kung gusto */
-        transform: translateX(-50%);
-
-        width: 85%;
-        max-width: 320px;
-        min-width: auto;
-
-        height: 50px;
-        padding: 0;
-
-        font-size: 14px;
-    }
-
-}
 .top-left-brand {
     position: fixed;
     top: 20px;
@@ -413,7 +384,6 @@ body::before {
     body{
         background-position:center;
         background-size:cover;
-        overflow-x:hidden;
     }
 
     /* Brand */
@@ -433,119 +403,269 @@ body::before {
 
     /* Top Menu */
     .top-center-menu{
+
         top:70px;
         left:50%;
         transform:translateX(-50%);
-        display:flex;
+
         gap:8px;
         flex-wrap:wrap;
         justify-content:center;
+
         width:95%;
     }
 
     .top-center-menu button{
+
         width:90px;
         height:36px;
+
         font-size:11px;
     }
 
     /* Login Button */
     .open-login{
+
         top:18px;
         right:18px;
+
         width:110px;
         height:40px;
+
         font-size:12px;
     }
 
     /* Hero */
     .hero-text{
+
         width:90%;
-        top:42%;
+
         left:50%;
-        transform:translate(-50%,-50%);
+        top:48%;
     }
 
     .hero-text h1{
+
         font-size:34px;
         line-height:1.1;
     }
 
     .hero-text p{
+
         font-size:12px;
         letter-spacing:2px;
         margin-top:8px;
     }
 
     /* Download Button */
-    .download-apk{
-        position:fixed !important;
-        left:50% !important;
-        bottom:120px !important;   /* Taasan pa kung gusto */
-        transform:translateX(-50%) !important;
+.download-apk {
+    position: absolute;
+    left: 50%;
+    bottom: 150px;
 
+    transform: translateX(-50%);
+
+    width: auto;
+    min-width: 220px;
+    height: 50px;
+    padding: 14px 32px;
+
+    background: #ffd000;
+    color: #000;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    z-index: 9999;
+
+    transition: .25s;
+}
+
+.download-apk:hover {
+    background: #ffb300;
+    transform: translateX(-50%) translateY(-3px);
+}
+
+/* 📱 Mobile */
+@media screen and (max-width:768px){
+
+    .download-apk{
         width:85%;
         max-width:300px;
-        min-width:unset;
 
-        height:50px;
-        padding:0;
+        height:48px;
+
+        bottom:80px; /* tinaasan mula sa baba */
 
         font-size:14px;
-        z-index:99999;
+        padding:0;
     }
+
+}
 
     /* Login Box */
     .login-box{
+
         position:fixed;
+
         top:50%;
         left:50%;
+
         right:auto;
+
         transform:translate(-50%,-50%);
+
         width:92%;
         max-width:360px;
+
         min-height:auto;
+
         padding:25px;
+
         border-radius:14px;
     }
 
     .login-box h2{
+
         font-size:22px;
         margin-bottom:20px;
     }
 
     .input-box input{
+
         height:48px;
         font-size:15px;
     }
 
     .login-box button{
+
         height:48px;
         font-size:15px;
     }
 
     /* Reward Popup */
     .reward-popup{
+
         width:90%;
         min-width:unset;
-        min-height:auto;
+
         padding:30px 20px;
+
+        min-height:auto;
     }
 
     .reward-popup h2{
+
         font-size:24px;
     }
 
     .reward-popup p{
+
         font-size:15px;
     }
 
     .reward-popup .note{
+
         font-size:12px;
     }
 
-    /* Hide Info Panel */
+    /* Hide left description */
     .info-panel{
         display:none;
     }
+
+}
+
+/* =========================================
+   BONUS MESSAGE
+========================================= */
+
+.bonus-text{
+    position:absolute;
+    top:62%;          /* nasa ibaba ng OPEN WORLD */
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    text-align:center;
+    z-index:2;
+}
+.bonus-text h1{
+    font-size:24px;
+    font-weight:700;
+    color:#ffd000;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    text-shadow:0 3px 10px rgba(0,0,0,.6);
+}
+
+.bonus-text p{
+    margin-top:8px;
+    font-size:15px;
+    color:#f5f5f5;
+    line-height:1.5;
+}
+
+.bonus-text span{
+    color:#ffd000;
+    font-weight:700;
+}
+
+/* =========================================
+   📱 MOBILE
+========================================= */
+@media screen and (max-width:768px){
+
+    .bonus-text{
+        top:20%;
+        left:50%;
+        width:90%;
+        transform:translateX(-50%);
+    }
+
+    .bonus-text h1{
+        font-size:16px;
+        letter-spacing:1px;
+    }
+
+    .bonus-text p{
+        margin-top:5px;
+        font-size:11px;
+        line-height:1.4;
+    }
+
+    .bonus-text span{
+        color:#ffd000;
+    }
+
+    /* OPEN WORLD sa ibaba ng bonus */
+    .hero-text{
+        top:58%;
+        left:50%;
+        width:90%;
+        transform:translate(-50%,-50%);
+    }
+
+    .hero-text h1{
+        font-size:28px;
+        line-height:1.1;
+    }
+
+    .hero-text p{
+        font-size:11px;
+        letter-spacing:2px;
+        margin-top:6px;
+    }
+
+    /* DOWNLOAD BUTTON */
+    .download-apk{
+        position:fixed;
+        left:50%;
+        bottom:90px;
+        transform:translateX(-50%);
+    }
+
 }
