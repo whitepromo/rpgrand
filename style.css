@@ -483,23 +483,29 @@ body::before {
         margin-top:6px;
     }
 
-    /* ==========================
-       BONUS MESSAGE
-    ========================== */
     .bonus-text{
-        position:absolute;
-        top:56%;
-        left:50%;
-        width:90%;
-        transform:translate(-50%,-50%);
-        text-align:center;
-    }
+    position: fixed !important;
+    left: 50% !important;
+    top: 58% !important;
+    transform: translate(-50%, -50%) !important;
 
-    .bonus-text p{
-        font-size:11px;
-        line-height:1.5;
-    }
+    width: 90%;
+    text-align: center;
 
+    z-index: 999999 !important;
+
+    background: rgba(255,0,0,.3); /* pang-test */
+}
+
+.bonus-text p{
+    color:#fff;
+    font-size:14px;
+}
+
+.bonus-text span{
+    color:#ffd000;
+    font-weight:bold;
+}
     /* ==========================
        DOWNLOAD BUTTON
     ========================== */
