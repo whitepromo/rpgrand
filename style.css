@@ -259,17 +259,18 @@ body::before {
     text-transform: uppercase;
 }
 
+/* =========================================
+   DOWNLOAD BUTTON
+========================================= */
 .download-apk {
     position: absolute;
     left: 50%;
     bottom: 150px;
-
     transform: translateX(-50%);
 
-    width: auto;
     min-width: 220px;
     height: 50px;
-    padding: 14px 32px;
+    padding: 0 32px;
 
     background: #ffd000;
     color: #000;
@@ -291,19 +292,25 @@ body::before {
     transform: translateX(-50%) translateY(-3px);
 }
 
-/* 📱 Mobile */
+/* =========================================
+   📱 MOBILE
+========================================= */
 @media screen and (max-width:768px){
 
     .download-apk{
-        width:85%;
-        max-width:300px;
+        position: fixed;      /* mas stable sa mobile */
+        left: 50%;
+        bottom: 100px;        /* taasan pa kung gusto */
+        transform: translateX(-50%);
 
-        height:48px;
+        width: 85%;
+        max-width: 320px;
+        min-width: auto;
 
-        bottom:80px; /* tinaasan mula sa baba */
+        height: 50px;
+        padding: 0;
 
-        font-size:14px;
-        padding:0;
+        font-size: 14px;
     }
 
 }
