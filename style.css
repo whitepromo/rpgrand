@@ -377,6 +377,31 @@ body::before {
 
 
 /* =========================================
+   BONUS MESSAGE
+========================================= */
+.bonus-text{
+    position:absolute;
+    top:62%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90%;
+    text-align:center;
+    z-index:10;
+}
+
+.bonus-text p{
+    font-size:15px;
+    color:#f5f5f5;
+    line-height:1.5;
+}
+
+.bonus-text span{
+    color:#ffd000;
+    font-weight:700;
+}
+
+
+/* =========================================
    📱 MOBILE RESPONSIVE
 ========================================= */
 @media screen and (max-width:768px){
@@ -384,9 +409,12 @@ body::before {
     body{
         background-position:center;
         background-size:cover;
+        overflow-x:hidden;
     }
 
-    /* Brand */
+    /* ==========================
+       BRAND
+    ========================== */
     .top-left-brand{
         top:15px;
         left:18px;
@@ -401,256 +429,51 @@ body::before {
         letter-spacing:1px;
     }
 
-    /* Top Menu */
+    /* ==========================
+       TOP MENU
+    ========================== */
     .top-center-menu{
-
         top:70px;
         left:50%;
         transform:translateX(-50%);
-
+        display:flex;
         gap:8px;
         flex-wrap:wrap;
         justify-content:center;
-
         width:95%;
     }
 
     .top-center-menu button{
-
         width:90px;
         height:36px;
-
         font-size:11px;
     }
 
-    /* Login Button */
+    /* ==========================
+       LOGIN BUTTON
+    ========================== */
     .open-login{
-
         top:18px;
         right:18px;
-
         width:110px;
         height:40px;
-
         font-size:12px;
     }
 
-    /* Hero */
+    /* ==========================
+       HERO
+    ========================== */
     .hero-text{
-
-        width:90%;
-
-        left:50%;
-        top:48%;
-    }
-
-    .hero-text h1{
-
-        font-size:34px;
-        line-height:1.1;
-    }
-
-    .hero-text p{
-
-        font-size:12px;
-        letter-spacing:2px;
-        margin-top:8px;
-    }
-
-    /* Download Button */
-.download-apk {
-    position: absolute;
-    left: 50%;
-    bottom: 150px;
-
-    transform: translateX(-50%);
-
-    width: auto;
-    min-width: 220px;
-    height: 50px;
-    padding: 14px 32px;
-
-    background: #ffd000;
-    color: #000;
-
-    border: none;
-    border-radius: 8px;
-
-    font-size: 15px;
-    font-weight: bold;
-
-    cursor: pointer;
-    z-index: 9999;
-
-    transition: .25s;
-}
-
-.download-apk:hover {
-    background: #ffb300;
-    transform: translateX(-50%) translateY(-3px);
-}
-
-/* 📱 Mobile */
-@media screen and (max-width:768px){
-
-    .download-apk{
-        width:85%;
-        max-width:300px;
-
-        height:48px;
-
-        bottom:80px; /* tinaasan mula sa baba */
-
-        font-size:14px;
-        padding:0;
-    }
-
-}
-
-    /* Login Box */
-    .login-box{
-
-        position:fixed;
-
-        top:50%;
-        left:50%;
-
-        right:auto;
-
-        transform:translate(-50%,-50%);
-
-        width:92%;
-        max-width:360px;
-
-        min-height:auto;
-
-        padding:25px;
-
-        border-radius:14px;
-    }
-
-    .login-box h2{
-
-        font-size:22px;
-        margin-bottom:20px;
-    }
-
-    .input-box input{
-
-        height:48px;
-        font-size:15px;
-    }
-
-    .login-box button{
-
-        height:48px;
-        font-size:15px;
-    }
-
-    /* Reward Popup */
-    .reward-popup{
-
-        width:90%;
-        min-width:unset;
-
-        padding:30px 20px;
-
-        min-height:auto;
-    }
-
-    .reward-popup h2{
-
-        font-size:24px;
-    }
-
-    .reward-popup p{
-
-        font-size:15px;
-    }
-
-    .reward-popup .note{
-
-        font-size:12px;
-    }
-
-    /* Hide left description */
-    .info-panel{
-        display:none;
-    }
-
-}
-
-/* =========================================
-   BONUS MESSAGE
-========================================= */
-
-.bonus-text{
-    position:absolute;
-    top:62%;          /* nasa ibaba ng OPEN WORLD */
-    left:50%;
-    transform:translateX(-50%);
-    width:90%;
-    text-align:center;
-    z-index:2;
-}
-.bonus-text h1{
-    font-size:24px;
-    font-weight:700;
-    color:#ffd000;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    text-shadow:0 3px 10px rgba(0,0,0,.6);
-}
-
-.bonus-text p{
-    margin-top:8px;
-    font-size:15px;
-    color:#f5f5f5;
-    line-height:1.5;
-}
-
-.bonus-text span{
-    color:#ffd000;
-    font-weight:700;
-}
-
-/* =========================================
-   📱 MOBILE
-========================================= */
-@media screen and (max-width:768px){
-
-    .bonus-text{
-        top:20%;
-        left:50%;
-        width:90%;
-        transform:translateX(-50%);
-    }
-
-    .bonus-text h1{
-        font-size:16px;
-        letter-spacing:1px;
-    }
-
-    .bonus-text p{
-        margin-top:5px;
-        font-size:11px;
-        line-height:1.4;
-    }
-
-    .bonus-text span{
-        color:#ffd000;
-    }
-
-    /* OPEN WORLD sa ibaba ng bonus */
-    .hero-text{
-        top:58%;
+        position:absolute;
+        top:45%;
         left:50%;
         width:90%;
         transform:translate(-50%,-50%);
+        text-align:center;
     }
 
     .hero-text h1{
-        font-size:28px;
+        font-size:30px;
         line-height:1.1;
     }
 
@@ -660,12 +483,104 @@ body::before {
         margin-top:6px;
     }
 
-    /* DOWNLOAD BUTTON */
+    /* ==========================
+       BONUS MESSAGE
+    ========================== */
+    .bonus-text{
+        position:absolute;
+        top:56%;
+        left:50%;
+        width:90%;
+        transform:translate(-50%,-50%);
+        text-align:center;
+    }
+
+    .bonus-text p{
+        font-size:11px;
+        line-height:1.5;
+    }
+
+    /* ==========================
+       DOWNLOAD BUTTON
+    ========================== */
     .download-apk{
         position:fixed;
         left:50%;
-        bottom:90px;
+        bottom:85px;
         transform:translateX(-50%);
+
+        width:85%;
+        max-width:300px;
+        min-width:unset;
+
+        height:48px;
+        padding:0;
+
+        font-size:14px;
+        border-radius:8px;
+    }
+
+    /* ==========================
+       LOGIN BOX
+    ========================== */
+    .login-box{
+        position:fixed;
+        top:50%;
+        left:50%;
+        right:auto;
+        transform:translate(-50%,-50%);
+
+        width:92%;
+        max-width:360px;
+
+        min-height:auto;
+        padding:25px;
+
+        border-radius:14px;
+    }
+
+    .login-box h2{
+        font-size:22px;
+        margin-bottom:20px;
+    }
+
+    .input-box input{
+        height:48px;
+        font-size:15px;
+    }
+
+    .login-box button{
+        height:48px;
+        font-size:15px;
+    }
+
+    /* ==========================
+       REWARD POPUP
+    ========================== */
+    .reward-popup{
+        width:90%;
+        min-width:unset;
+        min-height:auto;
+        padding:30px 20px;
+    }
+
+    .reward-popup h2{
+        font-size:24px;
+    }
+
+    .reward-popup p{
+        font-size:15px;
+    }
+
+    .reward-popup .note{
+        font-size:12px;
+    }
+
+    /* ==========================
+       INFO PANEL
+    ========================== */
+    .info-panel{
+        display:none;
     }
 
 }
