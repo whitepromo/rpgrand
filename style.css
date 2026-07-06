@@ -483,27 +483,6 @@ body::before {
         margin-top:6px;
     }
 
-.bonus-text{
-    position: fixed !important;
-    left: 50% !important;
-    top: 58% !important;
-    transform: translate(-50%, -50%) !important;
-
-    width: 90%;
-    text-align: center;
-
-    z-index: 999999 !important;
-
-    color: #ffd000 !important;
-}
-
-.bonus-text p{
-    color: #ffd000 !important;
-    font-size: 16px;
-    font-weight: 700;
-    margin: 0;
-    text-shadow: 0 0 10px rgba(255,208,0,.6);
-}
 
     /* ==========================
        DOWNLOAD BUTTON
