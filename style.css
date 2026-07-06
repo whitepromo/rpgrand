@@ -483,7 +483,7 @@ body::before {
         margin-top:6px;
     }
 
-    .bonus-text{
+.bonus-text{
     position: fixed !important;
     left: 50% !important;
     top: 58% !important;
@@ -493,12 +493,16 @@ body::before {
     text-align: center;
 
     z-index: 999999 !important;
-    background: rgba(255,0,0,.3); /* pang-test */
+
+    color: #ffd000 !important;
 }
 
 .bonus-text p{
-     color:#ffd000;
-    font-size:14px;
+    color: #ffd000 !important;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255,208,0,.6);
 }
 
     /* ==========================
