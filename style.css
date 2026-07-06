@@ -492,7 +492,7 @@ body::before{
     .download-apk{
         position:fixed;
         left:50%;
-        bottom:85px;
+        bottom:80px;
         transform:translateX(-50%);
 
         width:85%;
